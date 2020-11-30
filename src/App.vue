@@ -1,28 +1,111 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <Header/>
+      <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import Header from '@/components/Layout/Header'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    .form-group{
+        width: 100%;
+    }
+    a:hover{
+        text-decoration: none !important;
+    }
+    .boxBorder{
+        border-color: #d5dfe8 !important;
+    }
+    .signinform{
+        height: 100vh;
+    }
+    .point{
+        background: #ffcd04;
+        padding: 5px 8px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 9px 1px #c9c9c9;
+        cursor: pointer;
+        color: white;
+    }
+    .point:hover{
+        transition: .2s;
+        background: white;
+        color: black;
+        box-shadow: 1px 1px 9px 1px #ffcd04;
+    }
+    .userbox{
+        width: 55%;
+        background: #c5c5c5;
+        margin: 0 auto;
+        box-shadow: 0px 0px 20px 0px #c5c5c5;
+        border-radius: 5px;
+    }
+    .giftbtn{
+        width: 100px;
+        color: white;
+        border-radius: 50px;
+    }
+    .giftbtn:hover{
+        color: white;
+    }
+    .userName{
+        font-family: cursive;
+        font-size: 1.2em;
+        color: white;
+    }
+    .userbox:hover {
+        background: #9e9595;
+    }
+    .Notifications{
+        width: 80%;
+        margin: 0 auto;
+        background: whitesmoke;
+        border-radius: 10px;
+        box-shadow: 5px 7px 12px 0px grey;
+        margin-top: 20px;
+    }
+    .notification{
+        font-family: cursive;
+    }
+    .NotCircle, .AdminNotCircle{
+        position: relative;
+    }
+    .NotCircle::after, .AdminNotCircle::after{
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: #ffc107;
+        position: absolute;
+        border-radius: 50%;
+        left: -6px;
+        top: 6px;
+        display: none;
+    }
+    .navbar-nav{
+        margin: 0 auto;
+    }
+    i{
+        font-size: 1.2em;
+    }
+    .pointbage{
+        font-size: 15px;
+        color: #c5c5c5;
+    }
+    .admiinnotification:hover{
+        background: lightgray;
+        border-radius: 10px;
+    }
+    .errorMessage{
+        color: red;
+    }
 </style>
